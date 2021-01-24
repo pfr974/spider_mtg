@@ -21,7 +21,9 @@ To get what I needed, I created 3 differents spiders:
 |<code> <i>deck_links.py</i> </code>      | For each archetype, collect all deck links and store them in a file: <code> <i>decklinks.txt</i> </code>.  |
 |<code> <i>deck_lists.py</i> </code>      | For each deck link, collect the decklist and store it in a file: <code> <i>decks_raw/deck_XXX/</i> </code>.|
 
-You need to run the spiders in that order : <code> <i>archetype_links.py</i> -> <i>deck_links.py</i> -> <i>deck_lists.py</i> </code>. Please note that in the second step, collecting the deck links, I also use [Selenium](https://www.selenium.dev/selenium/docs/api/py/api.html) to automate web browser interaction. When collecting the deck links, I was not able to follow links to other page. Maybe I did not look hard enough for the next page CSS selector, but I wanted to move on and it was quicker to use <code>  <i> selenium </i> </code>. Finally, note that I was a bit lazy and did not format the raw deck files. They contains ugly bits of html not really readable at first glance. Therefore, I wrote <code> <i>format_decklist.py</i> </code> to format the raw deck files into readable txt files (￣ｰ￣)ﾉ.  
+You need to run the spiders in that order : <code> <i>archetype_links.py</i> -> <i>deck_links.py</i> -> <i>deck_lists.py</i> </code>. Please note that in the second step, collecting the deck links, I also use [Selenium](https://www.selenium.dev/selenium/docs/api/py/api.html) to automate web browser interaction. When collecting the deck links, I was not able to follow links to other pages. Maybe I did not look hard enough for the next page CSS selector, but I wanted to move on and it was quicker to use <code>  <i> selenium </i> </code>. 
+
+Finally, note that I was a bit lazy and did not format the raw deck files. They contain ugly bits of HTML not really readable at first glance. Therefore, I wrote <code> <i>format_decklist.py</i> </code> to format the raw deck files into readable txt files (￣ｰ￣)ﾉ.  
 
 ### Disclaimer 
 

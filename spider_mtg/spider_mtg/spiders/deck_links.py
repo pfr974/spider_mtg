@@ -56,7 +56,7 @@ class DeckLinksSpiderSelenium(scrapy.Spider):
         #Remove duplicate... just in case
         match_list = list(set(match_list))
 
-        with open('decklists.txt','w') as f:
+        with open('decklinks.txt','w') as f:
             f.write('\n'.join(['http://mtgtop8.com/'+match for match in match_list]))
 
         self.driver.close()

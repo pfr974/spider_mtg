@@ -10,7 +10,7 @@ class DeckSpider(scrapy.Spider):
 
     def start_requests(self):
 
-        with open('decklists.txt','r') as links:
+        with open('decklinks.txt','r') as links:
             urls = links.read().split('\n')[:-1]
         for url in urls:
             yield scrapy.Request(url=url, callback=self.parse)
